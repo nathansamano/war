@@ -1,7 +1,7 @@
 
 /* Starter routines for 
  * War:  The old card game!
- * Nathan Samano (Sophmore Year)
+ * Nathan Samano (Sophomore Year)
  * December 6, 2013
  */
 
