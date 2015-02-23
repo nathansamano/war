@@ -1,7 +1,7 @@
 /* LinkedList: using book's implementation
  * NOTE: insertions are to the front of the list
  * Nathan Samano
- * October 2013
+ * October 2013 (Sophmore Year)
  */
 import java.util.Random;
 
@@ -12,8 +12,8 @@ public class LinkedList {
 	//// data members ////
 	private int nodeCount;		// count number of nodes in LinkedList
 	private int deckSize;		// number of cards in deck
-	private Card front;			// front of queue
-	private Card rear;			// rear of queue
+	private Card front;		// front of queue
+	private Card rear;		// rear of queue
 	
 	//// Constructor ////
 	public LinkedList() {
@@ -101,12 +101,12 @@ public class LinkedList {
 	
 	//// dequeue a card
 	public Card dequeue() {
-		Card temp;		// a temporary reference node down the list
+		Card temp;	// a temporary reference node down the list
 		Card previous;	// the node before this temp (dummy)
 		
 		// start at the beginning of the list
 		temp = front.getNext();	// the first node that is not a dummy
-		previous = front;		// at the dummy node (one before the first node)
+		previous = front;	// at the dummy node (one before the first node)
 		
 		if (temp != null) {
 			// delete it
@@ -128,7 +128,7 @@ public class LinkedList {
 	
 	//// create a specified sized deck of cards
 	public void generateDeck(int maxValue, int maxSuit) {
-		int pointValue = 0;								// point value for card
+		int pointValue = 0;				// point value for card
 		for (int value=0; value<maxValue; value++) {	// loop through all card values
 			for (int suit=0; suit<maxSuit; suit++) {	// loop through all suits
 				switch (value) { // operations
@@ -161,8 +161,8 @@ public class LinkedList {
 					default: 	System.out.println("Invalid pointValue");
 								break;
 				} // switch
-				enqueue(suit, value, pointValue);			// enqueue card to deck
-				deckSize++;									// increment deckSize
+				enqueue(suit, value, pointValue);	// enqueue card to deck
+				deckSize++;				// increment deckSize
 			}
 		}
 	}
@@ -172,7 +172,7 @@ public class LinkedList {
 		LinkedList tempDeck = new LinkedList();			// temporary holding deck
 		LinkedList shuffledDeck = new LinkedList();		// the end shuffled deck
 		
-		int deckLength = iDeckLength + 1;				// +1 due to the wanted exclusion of zero
+		int deckLength = iDeckLength + 1;			// +1 due to the wanted exclusion of zero
 		Random randomGenerator = new Random();			// RNG
 	
 		//// must remove every card in initial deck and put in a shuffled deck
@@ -216,10 +216,10 @@ public class LinkedList {
 		//deck.generateDeck(13,4);		// generate full 52 card deck
 		deck.generateDeck(3,4);			// generate 12 card deck
 		//deck.generateDeck(3,0);		// generate 4 card deck
-		System.out.println("deckSize = " + deck.getDeckSize() + " Count = " + deck.count());		// print out the deck size
+		System.out.println("deckSize = " + deck.getDeckSize() + " Count = " + deck.count());	// print out the deck size
 		System.out.println(deck + "\n");							// print the generated deck
-		deck = deck.shuffleDeck(deck.getDeckSize());				// shuffle the deck
-		System.out.println(deck);									// print the shuffled deck
+		deck = deck.shuffleDeck(deck.getDeckSize());	// shuffle the deck
+		System.out.println(deck);			// print the shuffled deck
 
 	}
 }
