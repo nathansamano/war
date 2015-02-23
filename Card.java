@@ -18,11 +18,11 @@
  */
 
 import java.awt.image.BufferedImage; 	// need for buffered image
-import javax.imageio.ImageIO;			// needed for ImageIO.read, to find the file
-import java.io.File;					// needed for File, to open the file
-import java.io.InputStream;				// needed for image file to display
-import javax.swing.*;					// needed for JLabel
-import java.awt.BorderLayout;			// needed for BorderLayout, but only for main debugging
+import javax.imageio.ImageIO;		// needed for ImageIO.read, to find the file
+import java.io.File;			// needed for File, to open the file
+import java.io.InputStream;		// needed for image file to display
+import javax.swing.*;			// needed for JLabel
+import java.awt.BorderLayout;		// needed for BorderLayout, but only for main debugging
 
 public class Card {
 	
@@ -40,11 +40,11 @@ public class Card {
 	private static BufferedImage img = null;
 
 	//// data members ////
-	private int suit;			// the suit  
-	private int value;			// the card value, 0=ace, 1=deuce, 2=3 ... 9=10, 10=Jack, 11=Queen, 12=King
+	private int suit;		// the suit  
+	private int value;		// the card value, 0=ace, 1=deuce, 2=3 ... 9=10, 10=Jack, 11=Queen, 12=King
 	private int pointValue;		// the card point value, 2=deuce, 3=three ... 10=ten, 10=Jack, 10=Queen, 10=King, 11=ace
 	private JLabel image;		// the card image file
-	private Card next;			// a link to the next node
+	private Card next;		// a link to the next node
 	
 	//// Constructors ////
 	public Card() {
